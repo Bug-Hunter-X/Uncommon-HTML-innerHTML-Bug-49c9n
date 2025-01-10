@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Incorrect use of innerHTML with an element that has both text content and child elements
+    document.getElementById('myDiv').innerHTML = '<p>New text.</p>'; 
+
+    //This will remove the 'This is some text' and will replace it with  'New text.'
+    //If we want to add the new text, the right way to do it would be to use innerHTML to add <p>New text.</p> to the existing text. 
+  </script>
+</body>
+</html>
