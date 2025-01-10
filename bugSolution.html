@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Correct way to append new text using insertAdjacentHTML
+    document.getElementById('myDiv').insertAdjacentHTML('beforeend', '<p>New text.</p>');
+    // Or to replace the whole content
+    // document.getElementById('myDiv').innerHTML = '<p>New text.</p><p>This is some text</p>';
+  </script>
+</body>
+</html>
